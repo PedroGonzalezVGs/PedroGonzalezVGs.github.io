@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación</title>
+    <style>
+        body{
+        background-image: url(nivel.jpg);
+        }
+        .resortera{
+            float: none;
+            position: relative;
+            bottom: -400px;
+            width: 150px;
+        }
+        .red{
+            float: none;
+            width: 100px;
+            position: relative;
+            bottom: -250px;
+            right: 150px;
+            animation-name: example;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+        
+        @keyframes example {
+  0%   {right:100px; bottom:-250px;}
+  25%  {right:50px; bottom:-200px;}
+  50%  {right:0px; bottom:-150px;}
+  75%  {right:-50px; bottom:-100px;}
+  100% {right:-100px; bottom:-50px;}
+}       
+    </style>
+</head>
+<body>
+    <img src="resorteraag.webp" alt="resortera" class="resortera">
+    <img src="RedBird.webp" alt="red" class="red">
+</body>
+</html>
