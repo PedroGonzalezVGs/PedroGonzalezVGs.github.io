@@ -1,0 +1,74 @@
+<html>
+<head>
+
+  <title>Bienvenida del usuario</title>
+
+  <script type = "text/javascript">
+
+  function alertName() {
+
+    var grados = parseInt(document.forms[0].C.value);
+    var opcion = parseInt(document.forms[0].convertir.value);
+    var conver = grados;
+    var gradselect;
+
+    if(opcion == 1){
+        conver = grados+33.8;
+        gradselect = "°Farenheit";
+    }else{
+        conver = grados+274.15;
+        gradselect = "°Kelvin";
+    }
+    document.write("<table>");
+    document.write("<tr>");
+        document.write("<td>");
+            document.write("<p>°C =</p>");
+        document.write("</td>");
+        document.write("<td>");
+            document.write(grados);
+        document.write("</td>");
+    document.write("</tr>");
+
+    document.write("<tr>");
+        document.write("<td>");
+            document.write("<p>Tu opción : </p>");
+         document.write("</td>");
+         document.write("<td>");
+            document.write(gradselect);
+        document.write("</td>");
+    document.write("</tr>"); 
+      
+    document.write("<tr>");
+        document.write("<td>");  
+            document.write("<p>Equivale a <p>");
+        document.write("</td>");
+        document.write("<td>");
+            document.write(conver);
+        document.write("</td>");
+        document.write("<td>");
+            document.write(gradselect);
+        document.write("</td>");
+    document.write("</tr>"); 
+        document.write("</table>");
+    return true;
+  }
+
+  </script>
+
+</head>
+
+    <body>
+
+    <form id="myform" onsubmit="return alertName();">
+
+    <p>°C = <input id="C" name="C" type="text" /></p>
+    <p>Convertir a <select name="convertir" id="convertir">
+        <option value="1">Farenheit</option>
+        <option value="2">Kelvin</option>
+    </select></p>
+    
+    <p><input type="submit" /></p>
+
+    </form>
+</body>
+</html>
