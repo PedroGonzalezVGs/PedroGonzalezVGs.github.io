@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<body>
+    <div>
+        <form id="myform" onsubmit="return alertName();">
+            
+        <p>Inicio <input id="inicio" name="inicio" type="text" /></p>
+        <p>Fin <input id="fin" name="fin" type="text" /></p>
+        <p>Función: <select name="funcion" id="funcion">
+            <option value="1">Seno</option>
+            <option value="2">Coseno</option>
+            <option value="3">Tangente</option>
+            <option value="4">Cotangente</option>
+        </select></p>
+        <p><input type="submit"></p>
+    </div>
+
+    <div>
+    <div id="myPlot" style="width:100%;max-width:700px"></div>
+    </div>
+
+    <script>
+    function alertName(){
+        var inicio= parseInt(document.forms[0].inicio.value);
+        var fin= parseInt(document.forms[0].fin.value);
+        let opc = parseInt(document.forms[0].funcion.value);
+        let exp;
+
+        if(opc == 1){
+            exp = "Math.sin(x)";
+        }
+        if(opc == 2){
+            exp = "Math.cos(x)";
+        }
+        if(opc == 3){
+            exp = "Math.tan(x)";
+        }
+        if(opc == 4){
+            exp = "Math.tanh(x)";
+        }
+            
+            
+        // Generate values
+
+        const xValues = [];
+        const yValues = [];
+
+        for (let x = inicio; x <= fin; x += 0.1) {
+        xValues.push(x);
+        yValues.push(eval(exp));
+
+        }
+
+        // Display using Plotly
+        const data = [{x:xValues, y:yValues, mode:"lines"}];
+        const layout = {title: "y = " + exp};
+        Plotly.newPlot("myPlot", data, layout);
+        
+        return false;
+        
+    }
+    </script>
+</body>
+
+</html>
