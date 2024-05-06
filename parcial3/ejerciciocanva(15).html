@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorcado</title>
+</head>
+<body>
+    <div>
+        
+        <form id="myform" onsubmit="return jugar();">
+        
+            <p>Ingresa la palabra: <input id="pal" name="pal" type="text" /></p>
+        
+            <p><input type="submit" /></p>
+        </form>
+        <button onclick="borrar()">Borrar</button>
+
+        <div style="margin: 5px;">
+            <canvas id="mycanvas" width="500px" height="500px" style="border: 1px solid black;"></canvas>
+        </div>
+    </div>
+
+<script>
+    var cont = 0;
+    function jugar(){
+    const palabra  = "Perros";
+    var palusu = document.forms[0].pal.value;
+    const canvas = document.getElementById("mycanvas");
+    const ctx = canvas.getContext("2d");
+    ctx.lineWidth = 3;
+    
+    
+    if(palabra == palusu){
+        alert("Ganaste");
+    }
+
+    if(palabra != palusu){
+        cont++;
+    }
+
+    if(cont == 1){
+        ctx.beginPath(); //cabeza
+        ctx.arc(230, 58, 40, 0, 2*Math.PI);
+        ctx.stroke();
+    }
+
+    if(cont == 2){
+        ctx.beginPath();  //cuerpo
+        ctx.moveTo(230,97);
+        ctx.lineTo(230,250);
+        ctx.stroke();
+    }
+
+    if(cont == 3){
+        ctx.beginPath(); //pie izquierdo
+        ctx.moveTo(230,250);
+        ctx.lineTo(180,350);
+        ctx.stroke();
+    }
+
+    if(cont == 4){
+        ctx.beginPath(); //pie derecho
+        ctx.moveTo(230,250);
+        ctx.lineTo(280, 350);
+        ctx.stroke();
+    }
+
+    if(cont == 5){
+        ctx.beginPath(); //brazo izquierdo
+        ctx.moveTo(230,120);
+        ctx.lineTo(180, 200);
+        ctx.stroke();
+    }
+
+    if(cont >= 6){
+        ctx.beginPath(); //brazo derecho
+        ctx.moveTo(230,120);
+        ctx.lineTo(280,200);
+        ctx.stroke();
+        alert("Perdiste"); 
+    }
+
+    return false;
+    }
+
+    function borrar(){
+        cont = 0;
+        const canvas = document.getElementById("mycanvas");
+        const ctx = canvas.getContext("2d");
+        ctx.fillStyle = "white";
+        ctx.fillRect(10,10,500,500);
+    }
+
+</script>
+</body>
+</html>
