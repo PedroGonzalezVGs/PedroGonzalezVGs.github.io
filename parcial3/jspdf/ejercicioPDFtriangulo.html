@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="jspdf.js"></script>
+
+	<script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+
+	<script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.from_html.js"></script>
+    <title>Ejercicio PDF2</title>
+</head>
+<body>
+    <iframe frameborder="0" width="500" height="400"></iframe>
+    <script>
+        
+var car = prompt('Caracter: ');
+var altura = prompt('Altura: ');
+altura = parseInt(altura);
+
+var doc = new jsPDF();
+doc.setFontSize(22);
+var x = 0;
+var y = 0;
+
+for(var i=0;i<=altura;i++){
+    x=0;
+    for(var j=0;j<i;j++){
+        doc.text(20+x, 20+y, "" + car);
+        x+=4;
+    }
+    y+=4;
+}
+
+var string = doc.output('datauristring');
+
+$('iframe').attr('src', string);
+    </script>
+</body>
+</html>
