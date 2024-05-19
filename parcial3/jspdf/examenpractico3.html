@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Práctico Parcial 3</title>
+    <link rel="stylesheet" href="examenPrac3Css.css">
+    <script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="jspdf.js"></script>
+
+	<script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+
+	<script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.from_html.js"></script>
+</head>
+<body>
+    <div>
+        <h2>Clave de Cifrado:</h2>  
+    </div>
+    <table>
+        <tr>
+            <td>A</td>
+            <td>B</td>
+            <td>C</td>
+            <td>D</td>
+            <td>E</td>
+            <td>F</td>
+            <td>G</td>
+            <td>H</td>
+            <td>I</td>
+            <td>J</td>
+            <td>K</td>
+            <td>L</td>
+            <td>M</td>
+            <td>N</td>
+            <td>Ñ</td>
+            <td>O</td>
+            <td>P</td>
+            <td>Q</td>
+            <td>R</td>
+            <td>S</td>
+            <td>T</td>
+            <td>U</td>
+            <td>V</td>
+            <td>W</td>
+            <td>X</td>
+            <td>Y</td>
+            <td>Z</td>
+        </tr>
+        <tr>
+            <td>I</td>
+            <td>C</td>
+            <td>Ñ</td>
+            <td>H</td>
+            <td>O</td>
+            <td>M</td>
+            <td>T</td>
+            <td>L</td>
+            <td>B</td>
+            <td>S</td>
+            <td>A</td>
+            <td>R</td>
+            <td>Q</td>
+            <td>P</td>
+            <td>E</td>
+            <td>W</td>
+            <td>J</td>
+            <td>F</td>
+            <td>V</td>
+            <td>U</td>
+            <td>K</td>
+            <td>X</td>
+            <td>D</td>
+            <td>Y</td>
+            <td>N</td>
+            <td>Z</td>
+            <td>G</td>
+        </tr>
+    </table>
+
+    <div name="form">
+    <form id="myform" onsubmit="return cifrado()">
+        <p>Texto a cifrar: </p>
+        <input type="text" id="texto" name="texto">
+        <input type="submit">
+    </form>
+    </div>
+
+    <iframe frameborder="0" width="500" height="500" style="margin-top: 50px; margin-left: 400px;"></iframe>
+
+    <script>
+        function cifrado(){
+
+            let cadena = document.forms[0].texto.value;
+            
+            let largo = cadena.length;
+            
+            let cadenaci= "";
+
+            for(i=0; i<largo; i++){
+                if(cadena[i] == "A" || cadena[i] == "a"){
+                    cadenaci = cadenaci + "I";
+                }
+                if(cadena[i]== 'B' || cadena[i] == 'b'){
+                    cadenaci = cadenaci + "C";
+                }
+                if(cadena[i]== 'C' || cadena[i] == 'c'){
+                    cadenaci = cadenaci + "Ñ";
+                }
+                if(cadena[i]== 'D' || cadena[i] == 'd'){
+                    cadenaci = cadenaci + "H";
+                }
+                if(cadena[i]== 'E' || cadena[i] == 'e'){
+                    cadenaci = cadenaci + "O";
+                }
+                if(cadena[i]== 'F' || cadena[i] == 'f'){
+                    cadenaci = cadenaci + "M";
+                }
+                if(cadena[i]== 'G' || cadena[i] == 'g'){
+                    cadenaci = cadenaci + "T";
+                }
+                if(cadena[i]== 'H' || cadena[i] == 'h'){
+                    cadenaci = cadenaci + "L";
+                }
+                if(cadena[i]== 'I' || cadena[i] == 'i'){
+                    cadenaci = cadenaci + "B";
+                }
+                if(cadena[i]== 'J' || cadena[i] == 'j'){
+                    cadenaci = cadenaci + "S";
+                }
+                if(cadena[i]== 'K' || cadena[i] == 'k'){
+                    cadenaci = cadenaci + "A";
+                }
+                if(cadena[i]== 'L' || cadena[i] == 'l'){
+                    cadenaci = cadenaci + "R";
+                }
+                if(cadena[i]== 'M' || cadena[i] == 'm'){
+                    cadenaci = cadenaci + "Q";
+                }
+                if(cadena[i]== 'N' || cadena[i] == 'n'){
+                    cadenaci = cadenaci + "P";
+                }
+                if(cadena[i]== 'Ñ' || cadena[i] == 'ñ'){
+                    cadenaci = cadenaci + "E";
+                }
+                if(cadena[i]== 'O' || cadena[i] == 'o'){
+                    cadenaci = cadenaci + "W";
+                }
+                if(cadena[i]== 'P' || cadena[i] == 'p'){
+                    cadenaci = cadenaci + "J";
+                }
+                if(cadena[i]== 'Q' || cadena[i] == 'q'){
+                    cadenaci = cadenaci + "F";
+                }
+                if(cadena[i]== 'R' || cadena[i] == 'r'){
+                    cadenaci = cadenaci + "V";
+                }
+                if(cadena[i]== 'S' || cadena[i] == 's'){
+                    cadenaci = cadenaci + "U";
+                }
+                if(cadena[i]== 'T' || cadena[i] == 't'){
+                    cadenaci = cadenaci + "K";
+                }
+                if(cadena[i]== 'U' || cadena[i] == 'u'){
+                    cadenaci = cadenaci + "X";
+                }
+                if(cadena[i]== 'V' || cadena[i] == 'v'){
+                    cadenaci = cadenaci + "D";
+                }
+                if(cadena[i]== 'W' || cadena[i] == 'w'){
+                    cadenaci = cadenaci + "Y";
+                }
+                if(cadena[i]== 'Y' || cadena[i] == 'y'){
+                    cadenaci = cadenaci + "Z";
+                }
+                if(cadena[i]== 'Z' || cadena[i] == 'z'){
+                    cadenaci = cadenaci + "G";
+                }
+            }
+            
+            var doc = new jsPDF();
+
+            doc.setFontSize(40);
+            doc.text(20, 20, "El código cifrado es:" );
+            doc.text(20, 40, "" + cadenaci);
+        
+            
+
+            var string = doc.output('datauristring');
+
+            $('iframe').attr('src', string);
+
+            return false;
+        }
+
+
+    </script>
+
+
+</body>
+</html>
