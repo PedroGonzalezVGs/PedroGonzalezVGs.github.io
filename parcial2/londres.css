@@ -1,0 +1,51 @@
+body{
+    background-color: rgb(90, 178, 181);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+    color: rgb(45, 71, 73);
+}
+
+a{
+    color: rgb(201, 94, 55);
+}
+h2{
+    font-size: 30px;
+}
+.cuadro1{
+    border: orangered solid 13px;
+    margin: 50px;
+    background-color: white;
+    height: 290px;
+}
+.cuadro2{
+    border: rgb(255, 200, 80) solid 13px;
+    margin: 50px;
+    background-color: white;
+    height: 290px;
+}
+.texto{
+    margin: 15px;
+}
+.img1{
+    float: left;
+    margin: 40px;
+    border: orangered solid 10px;
+    padding: 10px;
+    background-color: rgb(255, 200, 80);
+}
+.img2{
+    float: right;
+    margin: 40px;
+    border: rgb(255, 200, 80) solid 10px;
+    padding: 10px;
+    background-color: orangered;
+}
+p{
+    font-size: 20px;
+}
+.intro{
+    margin: 15px;
+}
