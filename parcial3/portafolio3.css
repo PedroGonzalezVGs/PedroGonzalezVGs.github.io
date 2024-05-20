@@ -1,0 +1,75 @@
+body{
+    background-color: rgb(82, 99, 197);
+}
+
+h1{
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+
+h2{
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+
+#contenedor{
+    margin: auto;
+    margin-top: 5px;
+
+    width: 500px;
+    height: 80px;
+    background-color: rgb(58, 58, 58);
+}
+
+#minimargen{
+    padding: 5px;
+}
+
+#demo{
+    margin-top: 10px;
+    padding: 15px;
+    font-size: 50px;
+    color: rgb(209, 209, 209);
+    font-family:"Jersey 25 Charted", sans-serif;
+    text-align: center;
+}
+
+.jersey-25-charted-regular {
+    font-family: "Jersey 25 Charted", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+a{
+    text-decoration: none;
+    color: rgb(209, 209, 209);
+}
+
+table{
+    background-color: gray;
+    margin: auto;
+    margin-top: 30px;
+    padding: 15px;
+}
+
+button{
+    transition: all 0.5s;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+
+button:hover{   
+    width: 60px;
+    height: 60px;
+}
+
+#todo{
+    margin: auto;
+    width: 600px;
+    height: 570px;
+    background-color:rgb(151, 151, 151);
+    border: black solid 2px;
+}
