@@ -11025,3 +11025,10 @@ p {
 .titulo{
   background-image: url(/startbootstrap-business-casual-gh-pages/startbootstrap-business-casual-gh-pages/assets/img/logo.png);
 }
+.ubicacion{
+  margin-top: 100px;
+  color: white;
+  background-color: #198754;
+  border-radius: 5px;
+  align-items: center;
+}
