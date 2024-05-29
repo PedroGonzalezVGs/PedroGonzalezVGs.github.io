@@ -99,8 +99,20 @@
                 <div class="about-heading-content">
                     <div class="row">
                         <div class="col-xl-9 col-lg-10 mx-auto">
-                            <div style="margin: 20px;">
-                            </div>
+                            <div class="ubicacion">
+                        <h1 style="text-align: center;">Nuestra ubicacion</h1>
+                        <div id="map" style="width:400px;height:400px;background:yellow;margin:auto; margin-bottom: 20px;"></div>
+                                <script>
+                                function myMap() {
+                                    var mapOptions = {
+                                        center: new google.maps.LatLng(22.1392967637645, -100.99205101379069),
+                                        zoom: 20,
+                                        mapTypeId: google.maps.MapTypeId.HYBRID
+                                    }
+                                    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+                                    }
+                                </script>
+                                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
                         </div>
                     </div>
                 </div>
