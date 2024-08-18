@@ -1,0 +1,101 @@
+body{
+    background-color: black;
+}
+
+#maincontenedor{
+    width: 96%;
+    height: 100%;
+    border: black 25px solid;
+    background-color: #cccccc;
+}
+
+h1{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    margin: 0%;
+}
+
+.subtitulo{
+    background-color:#ffd480;
+    width: 90%;
+    height: 90px;
+    margin: auto;
+    margin-top: 15px;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    border: #806633 solid 2px;
+}
+
+.texto{
+    margin: 10px;
+}
+.texto2{
+    margin: 15px;
+}
+
+
+.amarillo{
+    width: 40%;
+    height: 200px;
+    background-color: #ffff80;
+    border: solid 4px #d9d940;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    position: relative;
+    left: 2%;
+    top: 30px;
+    }
+    
+    .azul{
+        width: 40%;
+        height: 200px;
+        background-color: #c6f8f8;
+        border: solid 4px #99cccc;
+        text-align: right;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        position: absolute;
+        left: 55%;
+        top: 31%;
+        }
+        
+        .morado{
+            width: 40%;
+            height: 200px;
+            background-color: #ffe6ff;
+            border: solid 4px #bfa6bf;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            position: relative;
+            left: 2%;
+            top: 150px;
+            }
+            
+            .rosa{
+                width: 43%;
+                height: 200px;
+                background-color: #ffe6ff;
+                border: solid 4px #bfa6bf;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 30px;
+                text-align: right;
+                position: relative;
+                left: 55%;
+                bottom: 50px;
+                }
+                
+                .verde{
+                    width: 40%;
+                    height: 250px;
+                    background-color: #80ff80;
+                    border: solid 4px #338033;
+                    text-align: center;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 30px;
+                    position: absolute;
+                    left: 30%;
+                    top: 50%; 
+                }
+                
